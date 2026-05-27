@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partenaires — Baobab · Speed Network SAS</title>
+<meta name="description" content="Devenez partenaire de Baobab. Banques, télécoms, gouvernements, startups : intégrez l'écosystème numérique souverain de l'Afrique.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,300;9..144,0,600;9..144,0,700;9..144,1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#FBF7EE;--ivory:#F6F1E7;--ink:#1A1915;--muted:#6B6A5F;--muted-2:#9A9788;--b:#0F4C3F;--b2:#0A3A30;--b3:#186C59;--bs:rgba(15,76,63,.08);--bl:rgba(15,76,63,.18);--g:#B8860B;--g3:#D9A426;--line:rgba(26,25,21,.09);}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;}
+a{text-decoration:none;color:inherit;}
+nav{position:sticky;top:0;z-index:100;background:rgba(251,247,238,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:0 5vw;height:64px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:700;color:var(--b);}
+.nav-links{display:flex;gap:2rem;align-items:center;}
+.nav-links a{font-size:.83rem;font-weight:500;color:var(--muted);transition:color .2s;}
+.nav-links a:hover{color:var(--b);}
+.nav-cta{background:var(--b);color:#fff !important;padding:.45rem 1.1rem;border-radius:8px;font-size:.82rem;font-weight:600;}
+.hero{padding:7rem 5vw 5rem;max-width:1100px;margin:0 auto;}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--b3);margin-bottom:1.2rem;}
+.hero h1{font-family:'Fraunces',serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:700;line-height:1.02;letter-spacing:-.04em;margin-bottom:1.5rem;}
+.hero h1 em{font-style:italic;color:var(--b);}
+.hero p{font-size:1.05rem;color:var(--muted);max-width:580px;line-height:1.8;}
+hr{border:none;border-top:1px solid var(--line);margin:0 5vw;}
+.section{padding:5rem 5vw;max-width:1100px;margin:0 auto;}
+.section-label{font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted-2);margin-bottom:.8rem;}
+.section h2{font-family:'Fraunces',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:600;line-height:1.1;letter-spacing:-.03em;margin-bottom:2rem;}
+.section h2 em{font-style:italic;color:var(--b);}
+
+/* PARTNER TYPES */
+.ptypes{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+.ptype{background:var(--ivory);border:1px solid var(--line);border-radius:16px;padding:2rem;transition:border-color .2s,transform .2s;}
+.ptype:hover{border-color:var(--bl);transform:translateY(-2px);}
+.ptype-ico{font-size:2.2rem;margin-bottom:1rem;}
+.ptype-title{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:600;margin-bottom:.5rem;}
+.ptype-desc{font-size:.85rem;color:var(--muted);line-height:1.65;margin-bottom:1rem;}
+.ptype-items{display:flex;flex-wrap:wrap;gap:.4rem;}
+.ptype-item{font-family:'JetBrains Mono',monospace;font-size:.6rem;font-weight:700;letter-spacing:.06em;padding:.2rem .6rem;border-radius:20px;background:var(--bs);color:var(--b3);border:1px solid var(--bl);}
+
+/* WHY */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem;}
+.why-card{padding:1.8rem;background:var(--ivory);border:1px solid var(--line);border-radius:14px;}
+.why-num{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:700;color:var(--b);line-height:1;margin-bottom:.5rem;}
+.why-title{font-weight:600;font-size:.9rem;margin-bottom:.3rem;}
+.why-desc{font-size:.8rem;color:var(--muted);line-height:1.55;}
+
+/* FORM */
+.partner-form{background:var(--b);border-radius:20px;padding:3.5rem;margin-top:3rem;}
+.partner-form h3{font-family:'Fraunces',serif;font-size:1.8rem;font-weight:700;color:#fff;letter-spacing:-.03em;margin-bottom:.6rem;}
+.partner-form h3 em{font-style:italic;color:var(--g3);}
+.partner-form p{color:rgba(246,241,231,.55);font-size:.88rem;margin-bottom:2rem;}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.form-field{display:flex;flex-direction:column;gap:.4rem;}
+.form-field label{font-family:'JetBrains Mono',monospace;font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(246,241,231,.5);}
+.form-field input,.form-field select,.form-field textarea{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:.7rem 1rem;color:rgba(246,241,231,.9);font-family:'Inter',sans-serif;font-size:.9rem;outline:none;transition:border-color .2s;}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-color:rgba(217,164,38,.6);}
+.form-field input::placeholder,.form-field textarea::placeholder{color:rgba(246,241,231,.3);}
+.form-field select option{background:var(--b2);color:#fff;}
+.form-field textarea{resize:vertical;min-height:100px;}
+.form-full{grid-column:1/-1;}
+.form-submit{margin-top:1.5rem;background:var(--g3);color:var(--b2);border:none;padding:.85rem 2.2rem;border-radius:10px;font-weight:700;font-size:.95rem;cursor:pointer;transition:transform .2s;}
+.form-submit:hover{transform:translateY(-2px);}
+
+footer{background:#1A1915;padding:2.5rem 5vw;}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.footer-copy{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:rgba(246,241,231,.2);letter-spacing:.04em;}
+@media(max-width:768px){.ptypes,.why-grid,.form-grid{grid-template-columns:1fr;}.nav-links{display:none;}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">🌳 Baobab</a>
+  <div class="nav-links">
+    <a href="/">Accueil</a>
+    <a href="/about.html">À propos</a>
+    <a href="/careers.html">Carrières</a>
+    <a href="mailto:contact@baobabsuper.app">Contact</a>
+    <a href="/partners.html" style="color:var(--b);font-weight:600;">Partenaires</a>
+    <a href="/#waitlist" class="nav-cta">Rejoindre la beta</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="eyebrow">Partenariats stratégiques</div>
+  <h1>Intégrez l'infrastructure<br><em>numérique de l'Afrique.</em></h1>
+  <p>Baobab n'est pas une application. C'est une plateforme ouverte. Banques, télécoms, institutions publiques, startups : devenez partenaire et accédez à des millions d'utilisateurs africains.</p>
+</div>
+
+<hr>
+
+<div class="section">
+  <div class="section-label">Qui peut devenir partenaire</div>
+  <h2>Un écosystème<br><em>pour tous les secteurs.</em></h2>
+  <div class="ptypes">
+    <div class="ptype">
+      <div class="ptype-ico">🏦</div>
+      <div class="ptype-title">Services Financiers</div>
+      <div class="ptype-desc">Banques, microfinances, assurances, EME : intégrez vos produits financiers dans le wallet Baobab et accédez à une distribution massive.</div>
+      <div class="ptype-items"><span class="ptype-item">Wallet B2B</span><span class="ptype-item">API Paiement</span><span class="ptype-item">COBAC</span><span class="ptype-item">Microcrédit</span></div>
+    </div>
+    <div class="ptype">
+      <div class="ptype-ico">📡</div>
+      <div class="ptype-title">Télécommunications</div>
+      <div class="ptype-desc">Opérateurs mobiles, FAI, fabricants d'appareils : distribuez Baobab sur votre réseau et bénéficiez de la couche Bao Mesh pour la connectivité offline.</div>
+      <div class="ptype-items"><span class="ptype-item">Distribution USSD</span><span class="ptype-item">Bao Mesh</span><span class="ptype-item">SDK Mobile</span></div>
+    </div>
+    <div class="ptype">
+      <div class="ptype-ico">🏛️</div>
+      <div class="ptype-title">Institutions Publiques</div>
+      <div class="ptype-desc">Ministères, mairies, agences : dématérialisez vos services via Bao eGov et touchez vos citoyens là où ils sont déjà connectés.</div>
+      <div class="ptype-items"><span class="ptype-item">PPP</span><span class="ptype-item">eGov API</span><span class="ptype-item">PKI ANTIC</span><span class="ptype-item">38 ministères</span></div>
+    </div>
+    <div class="ptype">
+      <div class="ptype-ico">🚀</div>
+      <div class="ptype-title">Startups & Développeurs</div>
+      <div class="ptype-desc">Construisez des mini-applications sur la plateforme Baobab via TCMPP et accédez immédiatement à la base d'utilisateurs existante.</div>
+      <div class="ptype-items"><span class="ptype-item">Mini-programs</span><span class="ptype-item">Bao API</span><span class="ptype-item">Developer SDK</span><span class="ptype-item">Rev Share</span></div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="section">
+  <div class="section-label">Pourquoi Baobab</div>
+  <h2>Ce que vous gagnez<br><em>à être là dès le début.</em></h2>
+  <div class="why-grid">
+    <div class="why-card"><div class="why-num">1,4Md</div><div class="why-title">Utilisateurs adressables</div><div class="why-desc">50+ pays africains, 6 vagues linguistiques. Votre intégration scale automatiquement.</div></div>
+    <div class="why-card"><div class="why-num">1er</div><div class="why-title">Avantage pionnier</div><div class="why-desc">Les partenaires fondateurs bénéficient de conditions préférentielles et d'une visibilité prioritaire.</div></div>
+    <div class="why-card"><div class="why-num">0</div><div class="why-title">Coût d'acquisition</div><div class="why-desc">Vos produits sont distribués à travers notre base utilisateur existante. Pas de nouveau canal à construire.</div></div>
+  </div>
+</div>
+
+<hr>
+
+<div class="section">
+  <div class="partner-form">
+    <h3>Démarrons une<br><em>conversation.</em></h3>
+    <p>Remplissez ce formulaire et notre équipe partnerships vous contacte sous 72h.</p>
+    <div class="form-grid">
+      <div class="form-field"><label>Prénom *</label><input type="text" placeholder="Votre prénom"></div>
+      <div class="form-field"><label>Nom *</label><input type="text" placeholder="Votre nom"></div>
+      <div class="form-field"><label>Organisation *</label><input type="text" placeholder="Nom de votre organisation"></div>
+      <div class="form-field"><label>Secteur *</label>
+        <select>
+          <option value="">— Sélectionnez —</option>
+          <option>Services Bancaires & Fintech</option>
+          <option>Télécommunications</option>
+          <option>Institution Publique</option>
+          <option>Startup & Tech</option>
+          <option>Commerce & Distribution</option>
+          <option>Investissement</option>
+          <option>Autre</option>
+        </select>
+      </div>
+      <div class="form-field"><label>Email professionnel *</label><input type="email" placeholder="vous@organisation.com"></div>
+      <div class="form-field"><label>Téléphone</label><input type="tel" placeholder="+237 6XX XXX XXX"></div>
+      <div class="form-field form-full"><label>Votre projet de partenariat</label><textarea placeholder="Décrivez en quelques lignes ce que vous souhaitez construire avec Baobab…"></textarea></div>
+    </div>
+    <button class="form-submit" onclick="this.textContent='Envoi en cours…';setTimeout(()=>{this.textContent='Message envoyé ✓';this.style.background='#00D68F';},1500);">Envoyer ma demande →</button>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-copy">© 2026 SPEED NETWORK SAS · TOUS DROITS RÉSERVÉS</span>
+    <span class="footer-copy">partnerships@baobabsuper.app</span>
+  </div>
+</footer>
+</body>
+</html>

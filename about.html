@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>À propos — Baobab · Speed Network SAS</title>
+<meta name="description" content="Speed Network SAS construit Baobab, l'écosystème numérique souverain de l'Afrique. Notre mission, notre vision, notre équipe.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,300;9..144,0,600;9..144,0,700;9..144,1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FBF7EE;--ivory:#F6F1E7;--linen:#E8E0CE;
+  --ink:#1A1915;--ink-2:#2B2A24;--muted:#6B6A5F;--muted-2:#9A9788;
+  --b:#0F4C3F;--b2:#0A3A30;--b3:#186C59;--bs:rgba(15,76,63,.08);--bl:rgba(15,76,63,.18);
+  --g:#B8860B;--g3:#D9A426;--gs:rgba(184,134,11,.10);
+  --line:rgba(26,25,21,.09);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;}
+a{text-decoration:none;color:inherit;}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(251,247,238,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:0 5vw;height:64px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:700;color:var(--b);letter-spacing:-.02em;}
+.nav-links{display:flex;gap:2rem;align-items:center;}
+.nav-links a{font-size:.83rem;font-weight:500;color:var(--muted);transition:color .2s;}
+.nav-links a:hover{color:var(--b);}
+.nav-cta{background:var(--b);color:#fff;padding:.45rem 1.1rem;border-radius:8px;font-size:.82rem;font-weight:600;transition:background .2s;}
+.nav-cta:hover{background:var(--b2);}
+
+/* HERO */
+.hero{padding:7rem 5vw 5rem;max-width:1100px;margin:0 auto;}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--b3);margin-bottom:1.2rem;}
+.hero h1{font-family:'Fraunces',serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:700;line-height:1.02;letter-spacing:-.04em;color:var(--ink);margin-bottom:1.5rem;}
+.hero h1 em{font-style:italic;color:var(--b);}
+.hero-sub{font-size:1.1rem;font-weight:300;color:var(--muted);line-height:1.8;max-width:640px;}
+
+/* DIVIDER */
+hr{border:none;border-top:1px solid var(--line);margin:0 5vw;}
+
+/* SECTIONS */
+.section{padding:5rem 5vw;max-width:1100px;margin:0 auto;}
+.section-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
+.section-label{font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted-2);margin-bottom:.8rem;}
+.section h2{font-family:'Fraunces',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:600;line-height:1.1;letter-spacing:-.03em;margin-bottom:1.2rem;}
+.section h2 em{font-style:italic;color:var(--b);}
+.section p{font-size:.95rem;font-weight:300;color:var(--muted);line-height:1.85;margin-bottom:1rem;}
+
+/* VALUES */
+.values{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;margin-top:3rem;}
+.value-card{background:var(--ivory);border:1px solid var(--line);border-radius:16px;padding:1.8rem;transition:border-color .2s,transform .2s;}
+.value-card:hover{border-color:var(--bl);transform:translateY(-2px);}
+.value-ico{font-size:2rem;margin-bottom:.8rem;}
+.value-title{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:.4rem;}
+.value-desc{font-size:.82rem;color:var(--muted);line-height:1.6;}
+
+/* TEAM */
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
+.team-card{background:var(--ivory);border:1px solid var(--line);border-radius:16px;padding:2rem;text-align:center;}
+.team-avatar{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--b),var(--b3));display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-family:'Fraunces',serif;font-size:1.5rem;font-weight:700;color:#fff;}
+.team-name{font-family:'Fraunces',serif;font-size:1rem;font-weight:600;margin-bottom:.2rem;}
+.team-role{font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--b3);margin-bottom:.6rem;}
+.team-desc{font-size:.78rem;color:var(--muted);line-height:1.5;}
+.team-hiring{border:2px dashed var(--bl);background:var(--bs);}
+.team-hiring .team-avatar{background:transparent;border:2px dashed var(--bl);font-size:1.8rem;}
+.team-hiring .team-name{color:var(--b);}
+
+/* STATS */
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;padding:3rem 0;}
+.stat{text-align:center;}
+.stat-val{font-family:'Fraunces',serif;font-size:2.8rem;font-weight:700;color:var(--b);line-height:1;}
+.stat-label{font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted-2);margin-top:.4rem;}
+
+/* TIMELINE */
+.timeline{border-left:2px solid var(--bl);padding-left:2rem;margin-top:2rem;}
+.tl-item{position:relative;margin-bottom:2.5rem;}
+.tl-item::before{content:'';position:absolute;left:-2.6rem;top:.3rem;width:10px;height:10px;border-radius:50%;background:var(--b);border:2px solid var(--paper);}
+.tl-date{font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:700;letter-spacing:.1em;color:var(--b3);margin-bottom:.3rem;}
+.tl-title{font-family:'Fraunces',serif;font-size:1rem;font-weight:600;color:var(--ink);margin-bottom:.3rem;}
+.tl-desc{font-size:.82rem;color:var(--muted);line-height:1.55;}
+
+/* CTA BAND */
+.cta-band{background:var(--b);padding:4rem 5vw;text-align:center;}
+.cta-band h2{font-family:'Fraunces',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:700;color:#fff;letter-spacing:-.03em;margin-bottom:1rem;}
+.cta-band h2 em{font-style:italic;color:var(--g3);}
+.cta-band p{font-size:.95rem;color:rgba(246,241,231,.65);margin-bottom:2rem;}
+.cta-btn{display:inline-block;background:var(--g3);color:var(--b2);padding:.85rem 2.2rem;border-radius:10px;font-weight:700;font-size:.95rem;transition:transform .2s;}
+.cta-btn:hover{transform:translateY(-2px);}
+
+/* FOOTER */
+footer{background:var(--ink-2);padding:3rem 5vw 2rem;}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.footer-copy{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:rgba(246,241,231,.2);letter-spacing:.04em;}
+
+@media(max-width:768px){
+  .section-grid,.values,.team-grid,.stats-row{grid-template-columns:1fr;}
+  .hero h1{font-size:2.4rem;}
+  .nav-links{display:none;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">🌳 Baobab</a>
+  <div class="nav-links">
+    <a href="/">Accueil</a>
+    <a href="/about.html" style="color:var(--b);font-weight:600;">À propos</a>
+    <a href="/careers.html">Carrières</a>
+    <a href="mailto:contact@baobabsuper.app">Contact</a>
+    <a href="/partners.html">Partenaires</a>
+    <a href="/#waitlist" class="nav-cta">Rejoindre la beta</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="eyebrow">Notre histoire</div>
+  <h1>Construire le système<br>d'exploitation<br><em>numérique de l'Afrique.</em></h1>
+  <p class="hero-sub">Speed Network SAS est une entreprise technologique camerounaise fondée avec une conviction simple : l'Afrique mérite une infrastructure numérique souveraine, pensée pour ses réalités, bâtie par ses talents.</p>
+</div>
+
+<hr>
+
+<div class="section">
+  <div class="stats-row">
+    <div class="stat">
+      <div class="stat-val">1</div>
+      <div class="stat-label">Pays · Phase 0</div>
+    </div>
+    <div class="stat">
+      <div class="stat-val">50+</div>
+      <div class="stat-label">Pays visés</div>
+    </div>
+    <div class="stat">
+      <div class="stat-val">94</div>
+      <div class="stat-label">Modules produit</div>
+    </div>
+    <div class="stat">
+      <div class="stat-val">2033</div>
+      <div class="stat-label">Vision IPO</div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="section">
+  <div class="section-grid">
+    <div>
+      <div class="section-label">Notre mission</div>
+      <h2>Une app.<br><em>Toute une vie numérique.</em></h2>
+      <p>Baobab est une super-application conçue pour les 1,4 milliard d'habitants du continent africain. Paiements, identité numérique, messagerie, commerce, services publics, épargne, intelligence artificielle locale — tout en une seule plateforme, même sans internet.</p>
+      <p>Nous ne copions pas WeChat. Nous construisons quelque chose de différent, ancré dans les réalités africaines : la connectivité intermittente, le paiement mobile, les langues locales, l'infrastructure postale, les besoins administratifs des 38 ministères.</p>
+    </div>
+    <div>
+      <div class="section-label">Notre vision</div>
+      <h2>De Yaoundé<br><em>à 50+ pays.</em></h2>
+      <p>Le Cameroun est notre laboratoire. Nous y construisons, testons et validons chaque module avant de le répliquer sur le continent par vagues linguistico-culturelles : CEMAC, Afrique de l'Ouest francophone, lusophone, anglophone, arabophone.</p>
+      <p>Chaque nouvelle vague hérite de toute la stack technologique déjà construite. C'est ce qui nous donne un avantage compétitif structurel sur n'importe quel acteur entrant pays par pays.</p>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="section">
+  <div class="section-label">Nos valeurs</div>
+  <h2>Ce qui nous guide<br><em>chaque jour.</em></h2>
+  <div class="values">
+    <div class="value-card">
+      <div class="value-ico">🌍</div>
+      <div class="value-title">Afrique d'abord</div>
+      <div class="value-desc">Chaque décision produit commence par la question : est-ce que ça marche pour un agriculteur à Maroua sans réseau 4G ?</div>
+    </div>
+    <div class="value-card">
+      <div class="value-ico">🔐</div>
+      <div class="value-title">Souveraineté</div>
+      <div class="value-desc">Les données de nos utilisateurs restent en Afrique. Nos algorithmes ne servent pas des intérêts extérieurs au continent.</div>
+    </div>
+    <div class="value-card">
+      <div class="value-ico">⚡</div>
+      <div class="value-title">Vitesse & rigueur</div>
+      <div class="value-desc">Nous bougeons vite sans sacrifier la qualité. La fintech et l'eGov exigent zéro tolérance pour les bugs critiques.</div>
+    </div>
+    <div class="value-card">
+      <div class="value-ico">🤝</div>
+      <div class="value-title">Inclusion radicale</div>
+      <div class="value-desc">Aucun utilisateur laissé pour compte. Ni par le revenu, ni par la langue, ni par la connectivité, ni par la maîtrise du numérique.</div>
+    </div>
+    <div class="value-card">
+      <div class="value-ico">🏗️</div>
+      <div class="value-title">Infrastructure longue durée</div>
+      <div class="value-desc">Nous construisons pour 20 ans, pas pour la prochaine levée de fonds. Chaque ligne de code doit tenir à l'échelle du continent.</div>
+    </div>
+    <div class="value-card">
+      <div class="value-ico">🌱</div>
+      <div class="value-title">Croissance locale</div>
+      <div class="value-desc">Nos emplois, nos fournisseurs, nos partenaires : africains en priorité. Le succès de Baobab doit irriguer l'écosystème local.</div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="section">
+  <div class="section-label">L'équipe fondatrice</div>
+  <h2>Les bâtisseurs<br><em>de demain.</em></h2>
+  <div class="team-grid">
+    <div class="team-card">
+      <div class="team-avatar">AS</div>
+      <div class="team-name">Aristide Stéphane Abah Abah</div>
+      <div class="team-role">CEO & Fondateur</div>
+      <div class="team-desc">Visionnaire de l'écosystème Baobab. Architecte de la stratégie produit, des partenariats institutionnels et de la vision continentale de Speed Network SAS.</div>
+    </div>
+    <div class="team-card team-hiring">
+      <div class="team-avatar">+</div>
+      <div class="team-name">CTO · Recherché</div>
+      <div class="team-role">Engineering Lead</div>
+      <div class="team-desc">Expert Go / Flutter / microservices. Tu as construit des systèmes à l'échelle ? Rejoins-nous.</div>
+    </div>
+    <div class="team-card team-hiring">
+      <div class="team-avatar">+</div>
+      <div class="team-name">Head of Growth · Recherché</div>
+      <div class="team-role">Croissance & Marché</div>
+      <div class="team-desc">Tu connais les marchés africains et tu sais faire grossir une base d'utilisateurs ? On a besoin de toi.</div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="section">
+  <div class="section-label">Notre parcours</div>
+  <h2>La route<br><em>parcourue.</em></h2>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-date">2024 — Genèse</div>
+      <div class="tl-title">Conception de l'écosystème Baobab</div>
+      <div class="tl-desc">Définition de l'architecture technique complète : 6 modules, 94 services, stack Go Zero + Flutter + Tencent Cloud. Rédaction du premier business plan et des documents stratégiques.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">2025 — Fondation</div>
+      <div class="tl-title">Création de Speed Network SAS</div>
+      <div class="tl-desc">Immatriculation de la société au Cameroun. Lancement du développement produit. Premiers contacts avec les partenaires institutionnels et les investisseurs seed.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">2026 — Beta fermée</div>
+      <div class="tl-title">Lancement de la beta au Cameroun</div>
+      <div class="tl-desc">Ouverture de la liste d'attente. Premiers utilisateurs sélectionnés. Validation des modules prioritaires : Bao eID, Bao Pay, Bao Messenger.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">2027–2030 — Expansion</div>
+      <div class="tl-title">Déploiement CEMAC puis continental</div>
+      <div class="tl-desc">Réplication de la stack sur la zone CEMAC (Gabon, Congo, RDC, Centrafrique, Tchad), puis vagues francophones, anglophones, lusophones et arabophones.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">2033 — Vision</div>
+      <div class="tl-title">IPO & leadership continental</div>
+      <div class="tl-desc">Introduction en bourse sur les marchés africains et internationaux. Baobab comme infrastructure numérique de référence du continent.</div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-band">
+  <h2>Croyez en <em>l'Afrique numérique ?</em></h2>
+  <p>Rejoignez la beta fermée ou explorez nos opportunités de carrière et de partenariat.</p>
+  <a href="/" class="cta-btn">Rejoindre la beta fermée</a>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-copy">© 2026 SPEED NETWORK SAS · YAOUNDÉ · CAMEROUN</span>
+    <span class="footer-copy">contact@baobabsuper.app</span>
+    <div style="display:flex;gap:1.5rem;">
+      <a href="/about.html" style="font-family:'JetBrains Mono',monospace;font-size:.65rem;color:rgba(246,241,231,.3);letter-spacing:.04em;">À PROPOS</a>
+      <a href="/careers.html" style="font-family:'JetBrains Mono',monospace;font-size:.65rem;color:rgba(246,241,231,.3);letter-spacing:.04em;">CARRIÈRES</a>
+      <a href="/press.html" style="font-family:'JetBrains Mono',monospace;font-size:.65rem;color:rgba(246,241,231,.3);letter-spacing:.04em;">PRESSE</a>
+      <a href="/partners.html" style="font-family:'JetBrains Mono',monospace;font-size:.65rem;color:rgba(246,241,231,.3);letter-spacing:.04em;">PARTENAIRES</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

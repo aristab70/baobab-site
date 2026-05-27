@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrières — Baobab · Speed Network SAS</title>
+<meta name="description" content="Rejoignez l'équipe qui construit l'écosystème numérique souverain de l'Afrique. Postes ouverts chez Speed Network SAS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,300;9..144,0,600;9..144,0,700;9..144,1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#FBF7EE;--ivory:#F6F1E7;--ink:#1A1915;--muted:#6B6A5F;--muted-2:#9A9788;--b:#0F4C3F;--b2:#0A3A30;--b3:#186C59;--bs:rgba(15,76,63,.08);--bl:rgba(15,76,63,.18);--g:#B8860B;--g3:#D9A426;--line:rgba(26,25,21,.09);}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;}
+a{text-decoration:none;color:inherit;}
+nav{position:sticky;top:0;z-index:100;background:rgba(251,247,238,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:0 5vw;height:64px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:700;color:var(--b);}
+.nav-links{display:flex;gap:2rem;align-items:center;}
+.nav-links a{font-size:.83rem;font-weight:500;color:var(--muted);transition:color .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--b);}
+.nav-cta{background:var(--b);color:#fff;padding:.45rem 1.1rem;border-radius:8px;font-size:.82rem;font-weight:600;}
+
+/* HERO VERT */
+.hero-green{background:var(--b);padding:7rem 5vw 5rem;}
+.hero-green-inner{max-width:1100px;margin:0 auto;}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(217,164,38,.8);margin-bottom:1.2rem;}
+.hero-green h1{font-family:'Fraunces',serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:700;line-height:1.02;letter-spacing:-.04em;color:#fff;margin-bottom:1.5rem;}
+.hero-green h1 em{font-style:italic;color:var(--g3);}
+.hero-green p{font-size:1.05rem;color:rgba(246,241,231,.65);max-width:600px;line-height:1.8;}
+
+/* PERKS */
+.section{padding:5rem 5vw;max-width:1100px;margin:0 auto;}
+.section-label{font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted-2);margin-bottom:.8rem;}
+.section h2{font-family:'Fraunces',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:600;line-height:1.1;letter-spacing:-.03em;margin-bottom:2.5rem;}
+.section h2 em{font-style:italic;color:var(--b);}
+.perks{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.perk{padding:1.5rem;background:var(--ivory);border:1px solid var(--line);border-radius:12px;}
+.perk-ico{font-size:1.8rem;margin-bottom:.7rem;}
+.perk-title{font-weight:600;font-size:.9rem;margin-bottom:.3rem;}
+.perk-desc{font-size:.8rem;color:var(--muted);line-height:1.55;}
+
+/* JOBS */
+.jobs{display:flex;flex-direction:column;gap:1rem;margin-top:2rem;}
+.job{background:var(--ivory);border:1px solid var(--line);border-radius:14px;padding:1.8rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;transition:border-color .2s,transform .2s;cursor:pointer;}
+.job:hover{border-color:var(--bl);transform:translateX(4px);}
+.job-info{}
+.job-dept{font-family:'JetBrains Mono',monospace;font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--b3);margin-bottom:.3rem;}
+.job-title{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:600;margin-bottom:.3rem;}
+.job-tags{display:flex;gap:.5rem;flex-wrap:wrap;}
+.job-tag{font-family:'JetBrains Mono',monospace;font-size:.6rem;font-weight:700;letter-spacing:.06em;padding:.2rem .6rem;border-radius:20px;background:var(--bs);color:var(--b3);border:1px solid var(--bl);}
+.job-arrow{font-size:1.3rem;color:var(--b);flex-shrink:0;}
+.job-priority{background:rgba(184,134,11,.1);border-color:rgba(184,134,11,.3);}
+.job-priority .job-dept{color:var(--g);}
+
+/* APPLY */
+.apply-box{background:var(--b);border-radius:20px;padding:3rem;margin-top:3rem;text-align:center;}
+.apply-box h3{font-family:'Fraunces',serif;font-size:1.8rem;font-weight:700;color:#fff;letter-spacing:-.03em;margin-bottom:.8rem;}
+.apply-box h3 em{font-style:italic;color:var(--g3);}
+.apply-box p{color:rgba(246,241,231,.6);font-size:.9rem;margin-bottom:1.8rem;}
+.apply-btn{display:inline-block;background:var(--g3);color:var(--b2);padding:.8rem 2rem;border-radius:10px;font-weight:700;font-size:.9rem;transition:transform .2s;}
+.apply-btn:hover{transform:translateY(-2px);}
+
+hr{border:none;border-top:1px solid var(--line);margin:0 5vw;}
+footer{background:#1A1915;padding:2.5rem 5vw;}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.footer-copy{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:rgba(246,241,231,.2);letter-spacing:.04em;}
+@media(max-width:768px){.perks,.jobs .job{grid-template-columns:1fr;flex-direction:column;align-items:flex-start;}.nav-links{display:none;}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">🌳 Baobab</a>
+  <div class="nav-links">
+    <a href="/">Accueil</a>
+    <a href="/about.html">À propos</a>
+    <a href="/careers.html" class="active" style="color:var(--b);font-weight:600;">Carrières</a>
+    <a href="mailto:contact@baobabsuper.app">Contact</a>
+    <a href="/partners.html">Partenaires</a>
+    <a href="/#waitlist" class="nav-cta" style="color:#fff;">Rejoindre la beta</a>
+  </div>
+</nav>
+
+<div class="hero-green">
+  <div class="hero-green-inner">
+    <div class="eyebrow">Rejoignez l'aventure</div>
+    <h1>Construisons l'Afrique<br><em>numérique ensemble.</em></h1>
+    <p>Speed Network SAS recrute des talents exceptionnels pour bâtir Baobab — la super-application qui va transformer la vie de 1,4 milliard de personnes. Votre code tournera sur un continent.</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-label">Pourquoi nous rejoindre</div>
+  <h2>Ce que vous<br><em>trouverez ici.</em></h2>
+  <div class="perks">
+    <div class="perk"><div class="perk-ico">🌍</div><div class="perk-title">Impact continental</div><div class="perk-desc">Votre travail touchera des dizaines de millions de personnes sur 50+ pays africains.</div></div>
+    <div class="perk"><div class="perk-ico">🚀</div><div class="perk-title">Équipe fondatrice</div><div class="perk-desc">Rejoignez en phase seed. Votre rôle, vos responsabilités et votre équité grandissent avec Baobab.</div></div>
+    <div class="perk"><div class="perk-ico">⚙️</div><div class="perk-title">Stack de pointe</div><div class="perk-desc">Go Zero, Flutter, Tencent Cloud TKE, OceanBase, Kafka — vous travaillez avec les meilleures technologies.</div></div>
+    <div class="perk"><div class="perk-ico">📍</div><div class="perk-title">Yaoundé & Remote</div><div class="perk-desc">Basé au Cameroun avec flexibilité remote pour les profils expérimentés hors d'Afrique centrale.</div></div>
+    <div class="perk"><div class="perk-ico">📈</div><div class="perk-title">Croissance accélérée</div><div class="perk-desc">Startup en phase de levée seed. Croissez avec nous de 0 à la licorne africaine.</div></div>
+    <div class="perk"><div class="perk-ico">🧠</div><div class="perk-title">Problèmes uniques</div><div class="perk-desc">Offline-first, mesh networking, multilingue, fintech réglementée COBAC — des défis que peu d'ingénieurs ont résolus.</div></div>
+  </div>
+</div>
+
+<hr>
+
+<div class="section">
+  <div class="section-label">Postes ouverts</div>
+  <h2>Nous cherchons<br><em>des bâtisseurs.</em></h2>
+  <div class="jobs">
+    <div class="job job-priority">
+      <div class="job-info">
+        <div class="job-dept">⚡ Prioritaire — Engineering</div>
+        <div class="job-title">Chief Technology Officer (CTO)</div>
+        <div class="job-tags"><span class="job-tag">Go / Golang</span><span class="job-tag">Flutter</span><span class="job-tag">Microservices</span><span class="job-tag">Yaoundé ou Remote</span></div>
+      </div>
+      <div class="job-arrow">→</div>
+    </div>
+    <div class="job job-priority">
+      <div class="job-info">
+        <div class="job-dept">⚡ Prioritaire — Produit</div>
+        <div class="job-title">Head of Product</div>
+        <div class="job-tags"><span class="job-tag">Super-app</span><span class="job-tag">Fintech</span><span class="job-tag">Marchés africains</span><span class="job-tag">Remote</span></div>
+      </div>
+      <div class="job-arrow">→</div>
+    </div>
+    <div class="job">
+      <div class="job-info">
+        <div class="job-dept">Engineering</div>
+        <div class="job-title">Ingénieur Backend Senior — Go / gRPC</div>
+        <div class="job-tags"><span class="job-tag">Go Zero</span><span class="job-tag">gRPC</span><span class="job-tag">Kafka</span><span class="job-tag">OceanBase</span></div>
+      </div>
+      <div class="job-arrow">→</div>
+    </div>
+    <div class="job">
+      <div class="job-info">
+        <div class="job-dept">Engineering</div>
+        <div class="job-title">Ingénieur Mobile — Flutter</div>
+        <div class="job-tags"><span class="job-tag">Flutter</span><span class="job-tag">Riverpod</span><span class="job-tag">Isar</span><span class="job-tag">Offline-first</span></div>
+      </div>
+      <div class="job-arrow">→</div>
+    </div>
+    <div class="job">
+      <div class="job-info">
+        <div class="job-dept">Growth & Ops</div>
+        <div class="job-title">Head of Growth — Afrique Centrale</div>
+        <div class="job-tags"><span class="job-tag">CEMAC</span><span class="job-tag">Mobile Money</span><span class="job-tag">Community</span><span class="job-tag">Yaoundé</span></div>
+      </div>
+      <div class="job-arrow">→</div>
+    </div>
+    <div class="job">
+      <div class="job-info">
+        <div class="job-dept">Finance & Legal</div>
+        <div class="job-title">Responsable Conformité & Réglementation</div>
+        <div class="job-tags"><span class="job-tag">COBAC</span><span class="job-tag">EME</span><span class="job-tag">RGPD</span><span class="job-tag">Droit OHADA</span></div>
+      </div>
+      <div class="job-arrow">→</div>
+    </div>
+  </div>
+
+  <div class="apply-box">
+    <h3>Pas votre poste ici ?<br><em>Candidature spontanée.</em></h3>
+    <p>Si vous croyez en la mission Baobab et avez un talent exceptionnel à apporter, écrivez-nous. On lit tout.</p>
+    <a href="mailto:careers@baobabsuper.app?subject=Candidature spontanée — Baobab" class="apply-btn">Envoyer une candidature →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-copy">© 2026 SPEED NETWORK SAS · YAOUNDÉ · CAMEROUN</span>
+    <span class="footer-copy">careers@baobabsuper.app</span>
+  </div>
+</footer>
+</body>
+</html>
